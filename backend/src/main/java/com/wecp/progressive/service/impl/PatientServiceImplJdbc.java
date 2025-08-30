@@ -1,37 +1,32 @@
 package com.wecp.progressive.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.wecp.progressive.dao.PatientDAO;
 import com.wecp.progressive.entity.Patient;
+import com.wecp.progressive.service.PatientService;
 
-public class PatientServiceImplJdbc implements PatientDAO {
+public class PatientServiceImplJdbc implements PatientService  {
 
-    @Override
-    public int addPatient(Patient patient) {
-        return -1;
-    }
+    private PatientDAO patientDAO;
 
-    @Override
-    public Patient getPatientById(int patientId) {
-        return null;
-    }
-
-    @Override
-    public void updatePatient(Patient patient) {
-        
-    }
-
-    @Override
-    public void deletePatient(int patientId) {
-        
+    public PatientServiceImplJdbc(PatientDAO patientDAO) {
+         this.patientDAO = patientDAO;
     }
 
     @Override
     public List<Patient> getAllPatients() {
-        List<Patient> patients = new ArrayList<>();
-       return patients;
+        return List.of();
+    }
+
+    @Override
+    public Integer addPatient(Patient patient) {
+        return -1;
+    }
+
+    @Override
+    public List<Patient> getAllPatientSortedByName() {
+        return List.of();
     }
 
 }

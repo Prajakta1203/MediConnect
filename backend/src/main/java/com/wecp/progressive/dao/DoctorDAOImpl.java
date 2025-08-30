@@ -29,8 +29,7 @@ public class DoctorDAOImpl implements DoctorDAO{
 
     @Override
     public List<Doctor> getAllDoctors() {
-       List<Doctor> doctors =  new ArrayList<>();
-       return doctors;
+        return List.of();
     }
 
 

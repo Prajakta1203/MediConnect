@@ -1,40 +1,40 @@
 package com.wecp.progressive.entity;
 
 public class Clinic {
-    private int clinic_id;
-    private String clinic_name;
+    private int clinicId;
+    private String clinicName;
     private String location;
-    private int doctor_id;
-    private String contact_number;
-    private int established_year;
+    private int doctorId;
+    private String contactNumber;
+    private int establishedYear;
 
     public Clinic() {
     }
 
-    public Clinic(int clinic_id, String clinic_name, String location, int doctor_id, String contact_number,
-            int established_year) {
-        this.clinic_id = clinic_id;
-        this.clinic_name = clinic_name;
+    public Clinic(int clinicId, String clinicName, String location, int doctorId, String contactNumber,
+            int establishedYear) {
+        this.clinicId = clinicId;
+        this.clinicName = clinicName;
         this.location = location;
-        this.doctor_id = doctor_id;
-        this.contact_number = contact_number;
-        this.established_year = established_year;
+        this.doctorId = doctorId;
+        this.contactNumber = contactNumber;
+        this.establishedYear = establishedYear;
     }
 
-    public int getClinic_id() {
-        return clinic_id;
+    public int getClinicId() {
+        return clinicId;
     }
 
-    public void setClinic_id(int clinic_id) {
-        this.clinic_id = clinic_id;
+    public void setClinicId(int clinicId) {
+        this.clinicId = clinicId;
     }
 
-    public String getClinic_name() {
-        return clinic_name;
+    public String getClinicName() {
+        return clinicName;
     }
 
-    public void setClinic_name(String clinic_name) {
-        this.clinic_name = clinic_name;
+    public void setClinicName(String clinicName) {
+        this.clinicName = clinicName;
     }
 
     public String getLocation() {
@@ -45,28 +45,28 @@ public class Clinic {
         this.location = location;
     }
 
-    public int getDoctor_id() {
-        return doctor_id;
+    public int getDoctorId() {
+        return doctorId;
     }
 
-    public void setDoctor_id(int doctor_id) {
-        this.doctor_id = doctor_id;
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
     }
 
-    public String getContact_number() {
-        return contact_number;
+    public String getContactNumber() {
+        return contactNumber;
     }
 
-    public void setContact_number(String contact_number) {
-        this.contact_number = contact_number;
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 
-    public int getEstablished_year() {
-        return established_year;
+    public int getEstablishedYear() {
+        return establishedYear;
     }
 
-    public void setEstablished_year(int established_year) {
-        this.established_year = established_year;
+    public void setEstablishedYear(int establishedYear) {
+        this.establishedYear = establishedYear;
     }
 
 }

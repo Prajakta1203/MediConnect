@@ -1,58 +1,57 @@
 package com.wecp.progressive.entity;
 
-import java.sql.Date;
+import java.util.Date;
 
-public class Patient {
-    private int patient_id;
-    private String full_name;
-    private Date date_of_birth;
-    private String contact_number;
+public class Patient implements Comparable<Patient> {
+    private int patientId;
+    private String fullName;
+    private Date dateOfBirth;
+    private String contactNumber;
     private String email;
     private String address;
 
     public Patient() {
     }
 
-    public Patient(int patient_id, String full_name, Date date_of_birth, String contact_number, String email,
-            String address) {
-        this.patient_id = patient_id;
-        this.full_name = full_name;
-        this.date_of_birth = date_of_birth;
-        this.contact_number = contact_number;
+    public Patient(int patientId, String fullName, Date dateOfBirth, String contactNumber, String email, String address) {
+        this.patientId = patientId;
+        this.fullName = fullName;
+        this.dateOfBirth = dateOfBirth;
+        this.contactNumber = contactNumber;
         this.email = email;
         this.address = address;
     }
 
-    public int getPatient_id() {
-        return patient_id;
+    public int getPatientId() {
+        return patientId;
     }
 
-    public void setPatient_id(int patient_id) {
-        this.patient_id = patient_id;
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public Date getDate_of_birth() {
-        return date_of_birth;
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
 
-    public void setDate_of_birth(Date date_of_birth) {
-        this.date_of_birth = date_of_birth;
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
     }
 
-    public String getContact_number() {
-        return contact_number;
+    public String getContactNumber() {
+        return contactNumber;
     }
 
-    public void setContact_number(String contact_number) {
-        this.contact_number = contact_number;
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 
     public String getEmail() {
@@ -71,4 +70,8 @@ public class Patient {
         this.address = address;
     }
 
+    @Override
+    public int compareTo(Patient otherPatient) {
+        return this.getFullName().compareTo(otherPatient.getFullName());
+    }
 }

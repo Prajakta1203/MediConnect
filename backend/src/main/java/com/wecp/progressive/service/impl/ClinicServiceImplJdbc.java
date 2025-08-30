@@ -5,12 +5,19 @@ import java.util.List;
 
 import com.wecp.progressive.dao.ClinicDAO;
 import com.wecp.progressive.entity.Clinic;
+import com.wecp.progressive.service.ClinicService;
 
-public class ClinicServiceImplJdbc implements ClinicDAO  {
+public class ClinicServiceImplJdbc implements ClinicService {
+
+    private ClinicDAO clinicDAO;
+
+    public ClinicServiceImplJdbc(ClinicDAO clinicDAO) {
+        this.clinicDAO = clinicDAO;
+    }
 
     @Override
-    public int addClinic(Clinic clinic) {
-        return -1;
+    public List<Clinic> getAllClinics() {
+        return List.of();
     }
 
     @Override
@@ -19,19 +26,18 @@ public class ClinicServiceImplJdbc implements ClinicDAO  {
     }
 
     @Override
+    public Integer addClinic(Clinic clinic) {
+        return -1;
+    }
+
+    @Override
     public void updateClinic(Clinic clinic) {
-        
+
     }
 
     @Override
     public void deleteClinic(int clinicId) {
-        
-    }
 
-    @Override
-    public List<Clinic> getAllClinics() {
-        List<Clinic> clinics = new ArrayList<>();
-        return clinics;
     }
 
 }

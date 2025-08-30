@@ -1,38 +1,37 @@
 package com.wecp.progressive.service.impl;
 
+import com.wecp.progressive.entity.Doctor;
+import com.wecp.progressive.service.DoctorService;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
-import com.wecp.progressive.dao.DoctorDAO;
-import com.wecp.progressive.entity.Doctor;
+public class DoctorServiceImplArraylist  implements DoctorService {
 
-public class DoctorServiceImplArraylist implements DoctorDAO {
-
-    @Override
-    public int addDoctor(Doctor doctor) {
-        return -1;
-    }
+    private static List<Doctor> doctorList = new ArrayList<>();
 
     @Override
-    public Doctor getDoctorById(int doctorId) {
-        return null;
-    }
-
-    @Override
-    public void updateDoctor(Doctor doctor) {
-        
-    }
-
-    @Override
-    public void deleteDoctor(int doctorId) {
-        
+    public void emptyArrayList() {
+        doctorList = new ArrayList<>();
     }
 
     @Override
     public List<Doctor> getAllDoctors() {
-        List<Doctor> doctors = new ArrayList<>();
-        return doctors;
+        return doctorList;
     }
 
-   
+    @Override
+    public Integer addDoctor(Doctor doctor) {
+        doctorList.add(doctor);
+        return doctorList.size();
+    }
+
+    @Override
+    public List<Doctor> getDoctorSortedByExperience() {
+        List<Doctor> sortedDoctors = doctorList;
+        Collections.sort(sortedDoctors);
+        return sortedDoctors;
+    }
 }

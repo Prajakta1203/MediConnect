@@ -29,8 +29,7 @@ public class ClinicDAOImpl implements ClinicDAO {
 
     @Override
     public List<Clinic> getAllClinics() {
-        List<Clinic> clinics = new ArrayList<>();
-        return clinics;
+        return List.of();
     }
 
 }

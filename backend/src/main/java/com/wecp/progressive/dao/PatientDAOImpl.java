@@ -29,8 +29,7 @@ public class PatientDAOImpl implements PatientDAO {
 
     @Override
     public List<Patient> getAllPatients() {
-        List<Patient> patients = new ArrayList<>();
-        return patients;
+        return List.of();
     }
 
 }
