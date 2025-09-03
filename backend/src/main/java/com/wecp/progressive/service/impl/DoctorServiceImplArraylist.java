@@ -1,5 +1,39 @@
 package com.wecp.progressive.service.impl;
 
-public class DoctorServiceImplArraylist  {
+import com.wecp.progressive.entity.Doctor;
+import com.wecp.progressive.service.DoctorService;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+@Service
+public class DoctorServiceImplArraylist  implements DoctorService {
+
+    private static List<Doctor> doctorList = new ArrayList<>();
+
+    @Override
+    public void emptyArrayList() {
+        doctorList = new ArrayList<>();
+    }
+
+    @Override
+    public List<Doctor> getAllDoctors() {
+        return doctorList;
+    }
+
+    @Override
+    public Integer addDoctor(Doctor doctor) {
+        doctorList.add(doctor);
+        return doctorList.size();
+    }
+
+    @Override
+    public List<Doctor> getDoctorSortedByExperience() {
+        List<Doctor> sortedDoctors = doctorList;
+        
+        Collections.sort(sortedDoctors);
+        return sortedDoctors;
+    }
 }
