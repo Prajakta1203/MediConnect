@@ -77,7 +77,16 @@ public class PatientServiceImplJpa  implements PatientService{
 
     @Override
     public void deletePatient(int patientId) throws Exception {
+<<<<<<< HEAD
         // br.deleteByPatientId(patientId);
         pr.deleteById(patientId);
+=======
+<<<<<<< HEAD
+        // br.deleteByPatientId(patientId);
+        pr.deleteById(patientId);
+=======
+    pr.deleteById(patientId);
+>>>>>>> cb63b9a6671ea13c550cbf5ccb71f2f1428ee50d
+>>>>>>> 09d5845a2d02937f4838cd7759524a30af89128a
     }
 }

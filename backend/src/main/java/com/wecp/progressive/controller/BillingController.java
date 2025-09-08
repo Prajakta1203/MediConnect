@@ -1,6 +1,10 @@
 package com.wecp.progressive.controller;
 
 import com.wecp.progressive.entity.Billing;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 09d5845a2d02937f4838cd7759524a30af89128a
 import com.wecp.progressive.entity.Patient;
 import com.wecp.progressive.service.BillingService;
 
@@ -50,5 +54,34 @@ public class BillingController {
     @GetMapping("/patient/{patientId}")
     public ResponseEntity<List<Billing>> getBillsByPatient(@PathVariable int patientId) {
         return ResponseEntity.ok(bs.getBillsByPatientId(patientId));
+<<<<<<< HEAD
+=======
+=======
+import org.springframework.http.ResponseEntity;
+
+import java.util.List;
+
+public class BillingController {
+
+    public ResponseEntity<List<Billing>> getAllBills() {
+        return null;
+    }
+
+    public ResponseEntity<Integer> createBill(Billing billing) {
+        return null;
+    }
+
+    public ResponseEntity<Integer> deleteBill(Billing billing) {
+        return null;
+    }
+
+    public ResponseEntity<List<Billing>> getBillsByBillingID(int billingId) {
+        return null;
+    }
+
+    public ResponseEntity<List<Billing>> getBillsByPatient(int patientId) {
+        return null;
+>>>>>>> cb63b9a6671ea13c550cbf5ccb71f2f1428ee50d
+>>>>>>> 09d5845a2d02937f4838cd7759524a30af89128a
     }
 }
