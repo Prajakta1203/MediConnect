@@ -1,9 +1,5 @@
 package com.wecp.progressive.service.impl;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 09d5845a2d02937f4838cd7759524a30af89128a
 import java.util.List;
 
 import javax.websocket.server.ServerEndpoint;
@@ -52,11 +48,5 @@ public class BillingServiceImpl implements BillingService{
     public Billing getBillById(int billingId) {
         return br.findById(billingId).orElse(null);
     }
-<<<<<<< HEAD
-=======
-=======
-public class BillingServiceImpl  {
->>>>>>> cb63b9a6671ea13c550cbf5ccb71f2f1428ee50d
->>>>>>> 09d5845a2d02937f4838cd7759524a30af89128a
 
 }
