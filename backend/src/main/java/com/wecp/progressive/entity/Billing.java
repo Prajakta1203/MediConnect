@@ -1,5 +1,6 @@
 package com.wecp.progressive.entity;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 import javax.annotation.Generated;
@@ -90,4 +91,8 @@ public class Billing {
         this.status = status;
     }
 
+=======
+public class Billing {
+
+>>>>>>> cb63b9a6671ea13c550cbf5ccb71f2f1428ee50d
 }
