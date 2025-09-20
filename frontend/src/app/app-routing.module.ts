@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'mediconnect',
-    loadChildren: () => import('./mediconnect/mediconnect.module').then((m) => m.MediconnectModule),
+    loadChildren: () => import('./mediconnect/mediconnect.module').then((m) => m.MediConnectModule),
   },
   {
     path: '',
@@ -22,3 +22,4 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
